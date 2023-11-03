@@ -4,7 +4,7 @@ const cloudinary = require("../utils/cloudinary");
 const upload = require("../middleware/multer");
 
  router.post('/upload', upload.single('image'), function (req, res) {
-  cloudinary.uploader.upload(req.file.path, function (err, result){
+  cloudinary.uploader.upload(req.file.path,{ folder:'FacbookApp'}, function (err, result){
     if(err) {
       console.log(err);
       return res.status(500).json({
