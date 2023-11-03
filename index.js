@@ -3,7 +3,7 @@ require('dotenv').config()
 const uploadRoute = require('./controller/routeUpload');
 
 const app = express();
-const PORT = 3000|| 5000;
+const PORT = 3000;
 app.use(express.json());
 
 
@@ -17,3 +17,5 @@ app.listen(PORT, () => {
 });
 
 //cloudinary account:  https://cloudinary.com/signup
+
+//http://localhost:3000/api/users/upload?image
